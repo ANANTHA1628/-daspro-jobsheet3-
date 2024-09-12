@@ -5,11 +5,11 @@ public class tugas1 {
        
         int TARIF_PER_KWH = 1500;
         int BATAS_PENGGUNAAN = 500;
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         
         
         System.out.print("Masukkan jumlah penggunaan listrik (kWh): ");
-        int penggunaanListrik = scanner.nextInt();
+        int penggunaanListrik = input.nextInt();
         
       
         int totalTagihan = penggunaanListrik * TARIF_PER_KWH;
@@ -18,16 +18,13 @@ public class tugas1 {
         boolean melebihiBatas = penggunaanListrik > BATAS_PENGGUNAAN;
         
         System.out.println("Total tagihan listrik: Rp " + totalTagihan);
-        if (melebihiBatas) {
-            System.out.println("Penggunaan listrik melebihi 500 kWh.");
-        } else {
-            System.out.println("Penggunaan listrik tidak melebihi 500 kWh.");
+        System.out.println("melebihiBatas (true/false) " + melebihiBatas);
+        
         }
         
-        // Tutup scanner
-        scanner.close();
+        
     }
-}
+
 
 
 
